@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuang.dao.BorrowBookMapper">
+
+
+    <insert id="borrowBook" parameterType="BorrowBook">
+        insert into ssmbuild.borrowbook(studentNum, bookName)
+        values (#{studentNum},#{bookName})
+    </insert>
+
+    <delete id="returnBook" parameterType="BorrowBook">
+        delete from ssmbuild.borrowbook where bookName = #{bookName}
+    </delete>
+
+</mapper>
